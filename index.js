@@ -9,31 +9,6 @@ class MyCustomErrors extends Error {
     this.error = options;
   }
 }
-/*
-try {
-  throw new MyCustomErrors('teste');
-} catch (e) {
-  console.log(e);
-} finally {
-  console.log('FINALY');
-}
-
-let primary = () => {
-  return new Promise((resolve,reject) => {
-    throw new MyCustomErrors('teste');
-    setTimeout(() => {
-      console.log('Promise Primary!');
-      resolve('Promise Primary!');
-    }, 5000);
-  });
-};
-
-primary().then(value => {
-  console.log(value);
-}).catch(err => {
-  console.error('CHEGUEI AQUI: '+err.error);
-});
-*/
 
 let primary = () => {
   return new Promise((resolve,reject) => {
